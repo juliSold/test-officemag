@@ -1,0 +1,22 @@
+# The directories
+.gradle/
+.idea/
+/allure-results
+build
+
+*.log
+
+# The files
+gradlew
+gradlew.bat
+_readme.md
+src/test/resources/config/users/existuser.properties
+src/test/resources/config/local.properties
+src/test/resources/config/app/app.properties
+
+#! Exclusion from .gitignore.
+
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+
