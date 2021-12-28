@@ -1,9 +1,11 @@
 # The Project is consisted some automation tests of site https://www.officemag.ru/
 ___
 It created UI tests by test cases. [See here](src/docs/testdocumentation.xlsx):
-1. the main page - 9 tests in `class MainPageTests`.
-2. the Registration form - 2 tests and one "disabled" test in `class RegistrationFormPageTests`.
-3. the Sign-In form - 4 tests in `class SignInFormTests`.
+* the main page - 9 tests in `class MainPageTests`.
+* the Registration form - 2 tests and one "disabled" test in `class RegistrationFormPageTests`.
+* the Sign-In form - 4 tests in `class SignInFormTests`.
+
+You can use notifications in telegram, slack or email. 
 
 ## USAGE 
 You can start tests local and remote.
@@ -53,6 +55,10 @@ Serve report:
 ```bash
 allure serve build/allure-results
 ```
+## Notifications
+It used `allure-notifications`. [See repo](https://github.com/qa-guru/allure-notifications)
+
+Send notifications `java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram.json" -jar notifications/allure-notifications-3.1.2.jar`
 
 ## Miscellaneous
 1. The load strategy "MERGE" (docs OWNER):

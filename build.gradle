@@ -70,7 +70,7 @@ tasks.withType(Test) {
 
 task mainpage(type: Test) {
     useJUnitPlatform {
-        includeTags 'mainpage'
+        includeTags '1.2.1.1'
     }
 }
 

@@ -13,6 +13,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @ExtendWith({AllureJunit5.class})
 public class BaseTest {
 
@@ -26,7 +29,11 @@ public class BaseTest {
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();
 
-        AllureAttachments.addScreenshotAs("Last screenshot");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss.SSS");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+
+        AllureAttachments.addScreenshotAs("Last screenshot " + dtf.format(now));
         AllureAttachments.addPageSource();
 //        AllureAttachments.attachNetwork(); // todo
         AllureAttachments.addBrowserConsoleLogs();

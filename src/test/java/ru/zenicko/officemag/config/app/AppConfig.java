@@ -9,9 +9,13 @@ import org.aeonbits.owner.Config;
 })
 public interface AppConfig extends Config {
 
+    @DefaultValue("https://www.officemag.ru")
     String webUrl();
+
     String apiUrl();
     String userLogin();
     String userPassword();
-    String user();
+
+    @DefaultValue("existuser")
+    String typeOfUser();
 }

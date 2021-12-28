@@ -13,6 +13,8 @@ _readme.md
 src/test/resources/config/users/existuser.properties
 src/test/resources/config/local.properties
 src/test/resources/config/app/app.properties
+notifications/allure-notifications-3.1.2.jar
+notifications/telegram.json
 
 #! Exclusion from .gitignore.
 

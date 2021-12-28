@@ -8,7 +8,6 @@ import org.junit.jupiter.api.*;
 import ru.zenicko.officemag.config.app.App;
 import ru.zenicko.officemag.config.user.UserConfig;
 import ru.zenicko.officemag.config.user.UserData;
-import ru.zenicko.officemag.helper.TestData;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -30,7 +29,7 @@ public class SignInFormTests extends BaseTest {
             open("/auth/");
             $("#authorizationHeader").shouldHave(Condition.text("Вход"));
         });
-        existUser = UserData.UserFactory("existuser");
+        existUser = UserData.UserFactory(App.config.typeOfUser());
     }
 
     @Test
@@ -51,7 +50,7 @@ public class SignInFormTests extends BaseTest {
         step("Check the full name of the user in a account", () -> {
             $(".User__item span.pseudoLink").click();
             $(".UserInfo__name").
-                    shouldHave(Condition.text(existUser.firstName() + " " +existUser.lastName()));
+                    shouldHave(Condition.text(existUser.firstName() + " " + existUser.lastName()));
         });
     }
 

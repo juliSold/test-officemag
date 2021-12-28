@@ -1,8 +1,10 @@
 package ru.zenicko.officemag.config.user;
-
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:config/users/${userConfigFile}.properties"})
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources({
+        "system:properties",
+        "classpath:config/users/${userConfigFile}.properties"})
 public interface UserConfig extends Config {
     String firstName();
     String lastName();
