@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Test suit: test the Registration Form")
+@Tag("RegistrationFormPageTests")
 public class RegistrationFormPageTests extends BaseTest {
     TestData newUser = TestData.dataFactory("ru");
 
@@ -127,7 +128,7 @@ public class RegistrationFormPageTests extends BaseTest {
     @DisplayName("1.2.4.3 Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
     @Tag("1.2.4.3")
     @Feature("1.2.4. Registration")
-    @Story("Ошибка при регистрации пользователя с существующим в системе адресом электронной почтыe")
+    @Story("Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
     void shouldBeNotUsersEqualEmail() {
         //Пользователь с таким адресом электронной почты уже существует.
     }

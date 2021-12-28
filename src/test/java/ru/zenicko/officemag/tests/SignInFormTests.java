@@ -14,6 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("1.2.3. Sign-in")
+@Tag("SignInFormTests")
 public class SignInFormTests extends BaseTest {
     static UserConfig existUser;
 

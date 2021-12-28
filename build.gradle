@@ -70,10 +70,26 @@ tasks.withType(Test) {
 
 task mainpage(type: Test) {
     useJUnitPlatform {
-        includeTags '1.2.1.1'
+        includeTags 'MainPageTests'
     }
 }
 
-test {
-    useJUnitPlatform()
+task signin(type: Test) {
+    useJUnitPlatform {
+        includeTags 'SignInFormTests'
+    }
+}
+
+task registration(type: Test) {
+    useJUnitPlatform {
+        includeTags 'RegistrationFormPageTests'
+    }
+}
+
+task all(type: Test) {
+    useJUnitPlatform {
+        includeTags 'MainPageTests',
+                'RegistrationFormPageTests',
+                'SignInFormTests'
+    }
 }

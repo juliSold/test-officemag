@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Test suit: test the main page of the website https://www.officemag.ru")
-@Tag("mainpage")
+@Tag("MainPageTests")
 public class MainPageTests extends BaseTest {
 
     @BeforeAll
@@ -26,6 +26,7 @@ public class MainPageTests extends BaseTest {
     @BeforeEach
     @Link("https://www.officemag.ru")
     void openMainPage() {
+        Configuration.timeout = 6000;
         step("Open the main page https://www.officemag.ru)", () -> {
             open("");
         });
