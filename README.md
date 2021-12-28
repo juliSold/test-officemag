@@ -28,16 +28,21 @@ The list of properties are
 The data of existed user for tests are in file `src/test/resources/config/users/existuser.properties`.
 
 ### For run local tests need fill local.properties or to receive system properties by command line (see 2 Miscellaneous).
-1. The quick start
-   1. Open a terminal and write
-    ```
-    ./gradlew test
-    ``` 
-   Or       
-    ```
-      ./gradlew <a name of a class>.<a name of a method> test
-    ```
+1. The quick start. Open a terminal and write
+
+```
+./gradlew test
+``` 
+or       
+```
+./gradlew test --tests *shouldOpenMainPageTest
+```
+or
+```
+./gradlew mainpage
+```
 *Note: Before you should move to the work directory of the project*.   
+
 2. The start Allure report
 ```
 ./build/allure/commandline/bin/allure serve build/allure-results
@@ -58,12 +63,16 @@ allure serve build/allure-results
 ## Notifications
 It used `allure-notifications`. [See repo](https://github.com/qa-guru/allure-notifications)
 
-Send notifications `java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram.json" -jar notifications/allure-notifications-3.1.2.jar`
+Send notifications by local running tests
+```
+java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram.json" -jar notifications/allure-notifications-3.1.2.jar
+```
 
 ## Miscellaneous
 1. The load strategy "MERGE" (docs OWNER):
 >All the specified sources will be loaded and merged. If the same property key is specified from more than one source, the one specified first will prevail.
 2. Use command line
 ```
-   ./gradlew -D[key]=[value] -D[key1]=[value1] -D[key1]=[value1] test
+   ./gradlew -D[key]=[value] -D[key1]=[value1] -D[key2]=[value2] test
 ``` 
+3. The example of the Allure report is saw [here](https://jenkins.autotests.cloud/user/nick/my-views/view/nz256_1/job/C09-nz256-lesson13-pet_project/12/allure/) 

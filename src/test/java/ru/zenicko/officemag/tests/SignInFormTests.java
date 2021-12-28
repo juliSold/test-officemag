@@ -34,10 +34,10 @@ public class SignInFormTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("1.2.3.1. Enter by EXISTING login and CORRECT password")
+    @DisplayName("Enter by EXISTING login and CORRECT password")
     @Tag("1.2.3.1")
     @Feature("1.2.3. Sign-in")
-    @Story("Enter by EXISTING login and CORRECT password")
+    @Story("1.2.3.1. Enter by EXISTING login and CORRECT password")
     void shouldSignInByValidUserTest() {
         step("Set field username", () -> {
             $("#USER_LOGIN").setValue(existUser.email());
@@ -56,9 +56,9 @@ public class SignInFormTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("1.2.3.2. Enter by UN-EXISTING login")
+    @DisplayName("Enter by UN-EXISTING login")
     @Feature("1.2.3. Sign-in")
-    @Story("Enter by UN-EXISTING login")
+    @Story("1.2.3.2. Enter by UN-EXISTING login")
     void shouldNotSignInByUnValidUsernameTest() {
         step("Set field username by a invalid username", () -> {
             $("#USER_LOGIN").setValue("185354" + existUser.email());
@@ -75,9 +75,9 @@ public class SignInFormTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("1.2.3.3. Enter by EXISTED login and UNCORRECTED password")
+    @DisplayName("Enter by EXISTED login and UNCORRECTED password")
     @Feature("1.2.3. Sign-in")
-    @Story("Enter by EXISTED login and UNCORRECTED password")
+    @Story("1.2.3.3. Enter by EXISTED login and UNCORRECTED password")
     void shouldNotSignInByUnValidPasswordTest() {
         step("Set field username by a valid username", () -> {
             $("#USER_LOGIN").setValue("185354" + existUser.email());
@@ -94,9 +94,9 @@ public class SignInFormTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("1.2.3.4. Enter by empty fields login and password")
+    @DisplayName("Enter by empty fields login and password")
     @Feature("1.2.3. Sign-in")
-    @Story("Enter by empty fields login and password")
+    @Story("1.2.3.4. Enter by empty fields login and password")
     void shouldNotSignInByEmptyFieldsTest() {
         step("Submit the username and the password", () -> {
             $("[name=Login]").click();

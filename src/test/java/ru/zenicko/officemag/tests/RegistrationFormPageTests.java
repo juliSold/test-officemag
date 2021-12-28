@@ -64,10 +64,10 @@ public class RegistrationFormPageTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("The page of Registration form:  1.2.4.2. Can choose a region and a city")
+    @DisplayName("Can choose a region and a city")
     @Tag("1.2.4.2")
     @Feature("1.2.4. Registration")
-    @Story("Can choose a region and a city")
+    @Story("1.2.4.2. Can choose a region and a city")
     void shouldBeSettingCity() {
         step("Set a region and a city", () -> {
             setRegionAndTown(newUser.getRegion(), newUser.getTown());
@@ -78,10 +78,10 @@ public class RegistrationFormPageTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("The page of Registration form: 1.2.4.1. The window \"Уважаемый клиент, спасибо за регистрацию!\" is visible\n")
+    @DisplayName("The window \"Уважаемый клиент, спасибо за регистрацию!\" is visible\n")
     @Tag("1.2.4.1")
     @Feature("1.2.4. Registration")
-    @Story("The window \"Уважаемый клиент, спасибо за регистрацию!\" is visible")
+    @Story("1.2.4.1. The window \"Уважаемый клиент, спасибо за регистрацию!\" is visible")
     void shouldBeWindowAfterRegistration() {
         String
                 region = newUser.getRegion(),
@@ -125,10 +125,10 @@ public class RegistrationFormPageTests extends BaseTest {
 
     @Test
     @Disabled
-    @DisplayName("1.2.4.3 Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
+    @DisplayName("Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
     @Tag("1.2.4.3")
     @Feature("1.2.4. Registration")
-    @Story("Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
+    @Story("1.2.4.3 Ошибка при регистрации пользователя с существующим в системе адресом электронной почты")
     void shouldBeNotUsersEqualEmail() {
         //Пользователь с таким адресом электронной почты уже существует.
     }
