@@ -63,9 +63,46 @@ allure serve build/allure-results
 ## Notifications
 It used `allure-notifications`. [See repo](https://github.com/qa-guru/allure-notifications)
 
-Send notifications by local running tests
+Send notifications by local running tests to `Telegram`:
 ```
 java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram.json" -jar notifications/allure-notifications-3.1.2.jar
+```
+Send notifications by local running tests to `Slack`:
+```
+java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/email.json" -jar notifications/allure-notifications-3.1.2.jar
+```
+Send notifications by local running tests to `email`:
+```
+java  "-DprojectName=PROJECT_NAME" `
+"-Denv=ENVIRONMENT" `
+"-DreportLink=BUILD_URL" `
+"-Dcomm=Any comment here" `
+"-Dconfig.file=notifications/email.json" `
+-jar notifications/allure-notifications-3.1.2.jar
+```
+*Note:* [**`**] - Windows PowerShell.
+
+
+Fill the file email.json:
+```
+    "base": {
+      "lang": "en",
+      "messenger": "email",
+      "allureFolder": "build/reports/allure-report/allureReport/",
+      "allureLinkPath": "allure",
+      "chart": true,
+      "chartName": "",
+      "project": "Some"
+    },
+    "mail": {
+      "host": "smtp.mail.ru",
+      "port": 465,
+      "username": "********@mail.ru",
+      "password": "*****************",
+      "enableSSL": true,
+      "from": "********@mail.ru",
+      "recipient": "********@mail.ru"
+    },
 ```
 
 ## Miscellaneous
@@ -75,4 +112,4 @@ java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" 
 ```
    ./gradlew -D[key]=[value] -D[key1]=[value1] -D[key2]=[value2] test
 ``` 
-3. The example of the Allure report is saw [here](https://jenkins.autotests.cloud/user/nick/my-views/view/nz256_1/job/C09-nz256-lesson13-pet_project/12/allure/) 
+3. The example of the Allure report is saw [here](https://jenkins.autotests.cloud/user/nick/my-views/view/nz256_1/job/C09-nz256-lesson13-pet_project/12/allure/)
