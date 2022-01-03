@@ -14,7 +14,7 @@ import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Test suit: test the main page of the website https://www.officemag.ru")
+@DisplayName("1. The main page")
 @Tag("MainPageTests")
 public class MainPageTests extends BaseTest {
 

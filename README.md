@@ -80,8 +80,7 @@ java  "-DprojectName=PROJECT_NAME" `
 "-Dconfig.file=notifications/email.json" `
 -jar notifications/allure-notifications-3.1.2.jar
 ```
-*Note:* [**`**] - Windows PowerShell.
-
+*Note:* Use the delimiter sign [**`**] in Windows PowerShell.
 
 Fill the file email.json:
 ```
@@ -112,4 +111,4 @@ Fill the file email.json:
 ```
    ./gradlew -D[key]=[value] -D[key1]=[value1] -D[key2]=[value2] test
 ``` 
-3. The example of the Allure report is saw [here](https://jenkins.autotests.cloud/user/nick/my-views/view/nz256_1/job/C09-nz256-lesson13-pet_project/12/allure/)
+3. The example of the Allure report is saw [here](https://clck.ru/aenug)

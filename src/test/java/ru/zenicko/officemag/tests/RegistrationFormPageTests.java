@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Test suit: test the Registration Form")
+@DisplayName("1.2.4. Registration")
 @Tag("RegistrationFormPageTests")
 public class RegistrationFormPageTests extends BaseTest {
     TestData newUser = TestData.dataFactory("ru");
