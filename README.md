@@ -47,6 +47,8 @@ or
 ```
 ./build/allure/commandline/bin/allure serve build/allure-results
 ```
+![](readme_images/Allure Report.jpg)
+
 ### For run remote tests need fill remote.properties (or local.properties) or to pass value:
 Run tests with filled remote.properties:
 ```bash
@@ -67,10 +69,19 @@ Send notifications by local running tests to `Telegram`:
 ```
 java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram.json" -jar notifications/allure-notifications-3.1.2.jar
 ```
+**Telegram notification**
+
+![](readme_images/telegram.jpg)
+
+
 Send notifications by local running tests to `Slack`:
 ```
 java  "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=notifications/email.json" -jar notifications/allure-notifications-3.1.2.jar
 ```
+**Slack notification**
+
+![](readme_images/slack.jpg)
+
 Send notifications by local running tests to `email`:
 ```
 java  "-DprojectName=PROJECT_NAME" `
@@ -103,6 +114,31 @@ Fill the file email.json:
       "recipient": "********@mail.ru"
     },
 ```
+**Email notification**  
+
+![](readme_images/email.jpg)
+
+### Allure TestOps
+You can manage tests by Allure TestsOps.
+
+| Dashboard |
+:-------------------------:|
+![shakal_screenshot](readme_images/AllureTestOps-Dashboard.jpg) |
+
+
+| Features | 
+:-------------------------:|
+![shakal_screenshot](readme_images/AllureTestOps-Features.jpg) | 
+
+| Launches |
+:-------------------------:|
+![shakal_screenshot](readme_images/AllureTestOps-Launches.jpg) | 
+
+**Note:** Fill setting Jenkins by
+![](readme_images/Jenkins Setting p5 Allure TestOps server.jpg)
+
+## Export issues to Jira
+![](readme_images/Jira Tasks.jpg)
 
 ## Miscellaneous
 1. The load strategy "MERGE" (docs OWNER):

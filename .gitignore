@@ -3,6 +3,7 @@
 .idea/
 /allure-results
 build
+temp/
 
 *.log
 
