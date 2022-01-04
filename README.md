@@ -136,10 +136,10 @@ You can manage tests by Allure TestOps.
 
 **Note:** Fill setting Jenkins by
 
-![](readme_images/Jenkins Setting p5 Allure TestOps server.jpg)
+![](readme_images/JenkinsSetting-Allure-TestOps-server.jpg)
 
 ## Export issues to Jira
-![](readme_images/Jira Tasks.jpg)
+![](readme_images/JiraTasks.jpg)
 
 ## Miscellaneous
 1. The load strategy "MERGE" (docs OWNER):
