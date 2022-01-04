@@ -119,7 +119,7 @@ Fill the file email.json:
 ![](readme_images/email.jpg)
 
 ### Allure TestOps
-You can manage tests by Allure TestsOps.
+You can manage tests by Allure TestOps.
 
 | Dashboard |
 :-------------------------:|
@@ -135,6 +135,7 @@ You can manage tests by Allure TestsOps.
 ![shakal_screenshot](readme_images/AllureTestOps-Launches.jpg) | 
 
 **Note:** Fill setting Jenkins by
+
 ![](readme_images/Jenkins Setting p5 Allure TestOps server.jpg)
 
 ## Export issues to Jira
